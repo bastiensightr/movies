@@ -6,6 +6,6 @@ install:
   - gem install fastlane --no-ri --no-doc --no-document
   - pod install
 script:
-  - fastlane snapshot --verbose --derived_data_path derivedData --skip_open_summary
+  - fastlane snapshot --derived_data_path derivedData --skip_open_summary
 after_success:
-  - bash <(curl -s https://serverless.sightr.io/v1/bash) -t 597e0014f08f1209cdbda37f -d screenshots
+  - bash <(curl -s -L https://serverless.sightr.io/v1/bash) -t 597e0014f08f1209cdbda37f -d screenshots
