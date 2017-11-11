@@ -8,4 +8,4 @@ install:
 script:
   - fastlane snapshot --derived_data_path derivedData --skip_open_summary
 after_success:
-  - bash <(curl -s -L https://serverless.sightr.io/v1/bash) -t 5a06ef9587742f0001d3dffe -d screenshots
+  - bash <(curl -s -L https://api.sightr.io/v1/bash) -t 5a06ef9587742f0001d3dffe -d screenshots
